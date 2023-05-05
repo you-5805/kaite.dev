@@ -21,20 +21,18 @@ export const SignInButton = () => {
       <RadixDialog.Portal>
         <RadixDialog.Overlay className='animate-appear data-[state=open]:animate-appear data-[state=closed]:animate-disappear fixed inset-0 bg-black bg-opacity-30' />
         <RadixDialog.Content className='fixed left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col gap-6 rounded-md bg-white p-6 shadow-xl'>
-          <div className='flex min-w-[300px] items-start justify-between'>
-            <RadixDialog.Title className='w-full text-center text-xl font-bold md:text-left'>
-              サインイン
-            </RadixDialog.Title>
+          <RadixDialog.Title className='w-full text-center text-xl font-bold'>
+            サインイン
+          </RadixDialog.Title>
 
-            <RadixDialog.Close asChild>
-              <button aria-label='モーダルを閉じる'>
-                <XMarkIcon
-                  className='h-6 w-6 text-gray-600'
-                  aria-hidden='true'
-                />
-              </button>
-            </RadixDialog.Close>
-          </div>
+          <RadixDialog.Close asChild>
+            <button
+              className='absolute right-6 top-6'
+              aria-label='モーダルを閉じる'
+            >
+              <XMarkIcon className='h-6 w-6 text-gray-600' aria-hidden='true' />
+            </button>
+          </RadixDialog.Close>
 
           <RadixDialog.Description className='md:text-md text-sm'>
             サインインすると、リクエストに「ヨミタイ」できるようになります。
