@@ -51,6 +51,7 @@ module.exports = {
         disallowTypeAnnotations: false,
       },
     ],
+    '@next/next/no-img-element': 'off',
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
