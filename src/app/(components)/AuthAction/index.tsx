@@ -1,5 +1,5 @@
-import { UserMenu } from '../UserMenu';
-import { SignInButton } from '@/components/SignInButton';
+import { SignInButton } from './SignInButton';
+import { UserMenu } from './UserMenu';
 import { nextAuthOptions } from '@/lib/server/nextauth';
 import { getServerSession } from 'next-auth';
 

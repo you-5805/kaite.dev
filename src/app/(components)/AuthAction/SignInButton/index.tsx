@@ -1,7 +1,7 @@
 'use client';
 
-import { Button } from '../Button';
-import { GitHubIcon } from '../images/GitHubIcon';
+import { Button } from '@/components/Button';
+import { GitHubIcon } from '@/components/images/GitHubIcon';
 import { cn } from '@/lib/cn';
 import * as RadixDialog from '@radix-ui/react-dialog';
 import Link from 'next/link';
