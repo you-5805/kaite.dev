@@ -41,7 +41,7 @@ export const SignInButton = () => {
               onClick={() => signIn('github')}
               className={cn(
                 'flex w-full max-w-md items-center justify-center gap-3 rounded bg-[#181515] p-2 font-bold text-white',
-                'shadow-md ring-indigo-500 ring-offset-2 transition-opacity hover:opacity-80 focus:outline-none focus-visible:ring-2',
+                'shadow-md ring-sky-500 ring-offset-2 transition-opacity hover:opacity-80 focus:outline-none focus-visible:ring-2',
               )}
             >
               <GitHubIcon />

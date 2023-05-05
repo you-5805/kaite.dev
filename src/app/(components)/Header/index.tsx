@@ -1,4 +1,4 @@
-import { AuthAction } from '../AuthAction';
+import { AuthAction } from './AuthAction';
 import Link from 'next/link';
 
 export const Header = () => {
@@ -7,7 +7,7 @@ export const Header = () => {
       <div className='mx-auto flex max-w-4xl items-center justify-between'>
         <Link
           href='/'
-          className='rounded-md text-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-1'
+          className='rounded-md text-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-1'
         >
           kaite.dev
         </Link>

@@ -1,4 +1,5 @@
 import { Header } from './(components)/Header';
+import { Footer } from './(components)/Footer';
 import type { Metadata } from 'next';
 import type { PropsWithChildren } from 'react';
 import '@/styles/global.css';
@@ -17,7 +18,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
 
         <div className='min-h-screen'>{children}</div>
 
-        <footer></footer>
+        <Footer />
       </body>
     </html>
   );

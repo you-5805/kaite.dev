@@ -21,7 +21,7 @@ export const UserMenu = ({ session }: Props) => {
       <DropdownMenu.Trigger asChild>
         <button
           aria-label='ユーザーメニューを開く'
-          className='h-10 w-10 overflow-hidden rounded-full ring-indigo-500 ring-offset-2 transition-opacity hover:bg-opacity-30 hover:opacity-80 focus:outline-none focus-visible:ring-2'
+          className='h-10 w-10 overflow-hidden rounded-full ring-sky-500 ring-offset-2 transition-opacity hover:bg-opacity-30 hover:opacity-80 focus:outline-none focus-visible:ring-2'
         >
           {imageUrl !== null && imageUrl !== undefined ? (
             <img
@@ -45,9 +45,9 @@ export const UserMenu = ({ session }: Props) => {
           align='end'
         >
           <DropdownMenu.Item className='group cursor-pointer p-1 data-[highlighted]:outline-none'>
-            <span className='flex w-full items-center rounded-md px-2 py-2 text-sm text-gray-900 group-data-[highlighted]:bg-indigo-500 group-data-[highlighted]:text-white'>
+            <span className='flex w-full items-center rounded-md px-2 py-2 text-sm text-gray-900 group-data-[highlighted]:bg-sky-500 group-data-[highlighted]:text-white'>
               <ChatBubbleOvalLeftEllipsisIcon
-                className='mr-2 h-5 w-5 text-indigo-600 group-data-[highlighted]:text-white'
+                className='mr-2 h-5 w-5 text-sky-600 group-data-[highlighted]:text-white'
                 aria-hidden='true'
               />
               <span>リクエスト</span>
@@ -57,9 +57,9 @@ export const UserMenu = ({ session }: Props) => {
             className='group cursor-pointer p-1 data-[highlighted]:outline-none'
             onSelect={() => signOut()}
           >
-            <span className='flex w-full items-center rounded-md px-2 py-2 text-sm text-gray-900 group-data-[highlighted]:bg-indigo-500 group-data-[highlighted]:text-white'>
+            <span className='flex w-full items-center rounded-md px-2 py-2 text-sm text-gray-900 group-data-[highlighted]:bg-sky-500 group-data-[highlighted]:text-white'>
               <ExitIcon
-                className='mr-2 h-5 w-5 text-indigo-600 group-data-[highlighted]:text-white'
+                className='mr-2 h-5 w-5 text-sky-600 group-data-[highlighted]:text-white'
                 aria-hidden='true'
               />
               サインアウト
