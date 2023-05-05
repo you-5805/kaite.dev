@@ -1,6 +1,5 @@
 'use client';
 
-import { GoogleIcon } from './GoogleIcon';
 import { Button } from '../Button';
 import { GitHubIcon } from '../images/GitHubIcon';
 import { cn } from '@/lib/cn';
@@ -38,17 +37,6 @@ export const SignInButton = () => {
             サインインすると、リクエストに「ヨミタイ」できるようになります。
           </RadixDialog.Description>
           <div className='flex flex-col items-center gap-4'>
-            <button
-              onClick={() => signIn('google')}
-              className={cn(
-                'flex w-full max-w-md items-center justify-center gap-3 rounded border border-gray-200 bg-white p-2 font-bold text-[#000000]',
-                'shadow-md ring-indigo-500 ring-offset-2 transition-colors hover:bg-gray-100 focus:outline-none focus-visible:ring-2',
-              )}
-            >
-              <GoogleIcon />
-              Login with Google
-            </button>
-
             <button
               onClick={() => signIn('github')}
               className={cn(
