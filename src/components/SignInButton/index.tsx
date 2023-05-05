@@ -45,7 +45,7 @@ export const SignInButton = () => {
               )}
             >
               <GitHubIcon />
-              GitHub
+              GitHub でサインイン
             </button>
 
             <p className='md:text-md text-xs'>
