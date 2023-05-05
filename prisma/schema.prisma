@@ -1,0 +1,48 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider          = "postgresql"
+  url               = env("POSTGRES_PRISMA_URL")
+  directUrl         = env("POSTGRES_URL_NON_POOLING")
+  shadowDatabaseUrl = env("POSTGRES_URL_NON_POOLING")
+}
+
+enum ArticleStatus {
+  OPEN
+  CLOSED
+}
+
+model ArticleRequest {
+  id        String   @id @default(cuid()) @map("id")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  title       String @map("title") @db.VarChar(255)
+  description String @map("description") @db.Text()
+
+  status ArticleStatus @default(OPEN) @map("status")
+
+  ArticleRequestActivit ArticleRequestActivity[]
+
+  @@map("article_requests")
+}
+
+enum ArticleRequestActivityType {
+  CREATED
+  CLOSED
+  RE_OPENED
+}
+
+model ArticleRequestActivity {
+  id        String   @id @default(cuid()) @map("id")
+  timestamp DateTime @default(now()) @map("timestamp")
+
+  type ArticleRequestActivityType @map("type")
+
+  articleRequest   ArticleRequest @relation(fields: [articleRequestId], references: [id])
+  articleRequestId String         @map("article_request_id")
+
+  @@map("article_request_activities")
+}
