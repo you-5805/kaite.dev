@@ -19,8 +19,8 @@ model ArticleRequest {
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
 
-  title       String @map("title") @db.VarChar(255)
-  description String @map("description") @db.Text()
+  title       String @default("") @map("title") @db.VarChar(255)
+  description String @default("") @map("description") @db.Text()
 
   status ArticleStatus @default(OPEN) @map("status")
 

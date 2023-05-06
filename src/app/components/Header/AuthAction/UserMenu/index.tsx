@@ -7,6 +7,7 @@ import {
   ChatBubbleOvalLeftEllipsisIcon,
   UserIcon,
 } from '@heroicons/react/24/outline';
+import { useRouter } from 'next/navigation';
 import type { Session } from 'next-auth';
 
 type Props = {
@@ -14,6 +15,8 @@ type Props = {
 };
 
 export const UserMenu = ({ session }: Props) => {
+  const router = useRouter();
+
   const imageUrl = session.user?.image;
 
   return (
@@ -44,7 +47,10 @@ export const UserMenu = ({ session }: Props) => {
           className='absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none'
           align='end'
         >
-          <DropdownMenu.Item className='group cursor-pointer p-1 data-[highlighted]:outline-none'>
+          <DropdownMenu.Item
+            onSelect={() => router.push('/requests/new')}
+            className='group cursor-pointer p-1 data-[highlighted]:outline-none'
+          >
             <span className='flex w-full items-center rounded-md px-2 py-2 text-sm text-gray-900 group-data-[highlighted]:bg-sky-500 group-data-[highlighted]:text-white'>
               <ChatBubbleOvalLeftEllipsisIcon
                 className='mr-2 h-5 w-5 text-sky-600 group-data-[highlighted]:text-white'
