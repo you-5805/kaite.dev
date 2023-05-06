@@ -2,6 +2,7 @@ import { AuthAction } from './AuthAction';
 import { SizedContainer } from '@/components/SizedContainer';
 import { Logo } from '@/components/images/Logo';
 import Link from 'next/link';
+import { Suspense } from 'react';
 
 export const Header = () => {
   return (
@@ -16,8 +17,14 @@ export const Header = () => {
           <span>kaite.dev</span>
         </Link>
 
-        {/* @ts-expect-error Async Server Component */}
-        <AuthAction />
+        <div className='h-10 animate-fade-in'>
+          <Suspense fallback={null}>
+            <div className='animate-fade-in'>
+              {/* @ts-expect-error Async Server Component */}
+              <AuthAction />
+            </div>
+          </Suspense>
+        </div>
       </div>
     </SizedContainer>
   );

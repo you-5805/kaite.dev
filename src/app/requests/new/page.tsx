@@ -1,5 +1,5 @@
-import { CreateRequestForm } from './CreateRequestForm';
+import { NewArticleRequestPage } from '@/components/pages/NewArticleRequestPage';
 
 export default function Page() {
-  return <CreateRequestForm />;
+  return <NewArticleRequestPage />;
 }

@@ -1,5 +1,5 @@
-import { Header } from './components/Header';
-import { Footer } from './components/Footer';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 import type { Metadata } from 'next';
 import type { PropsWithChildren } from 'react';
 import '@/styles/global.css';
@@ -13,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang='ja'>
-      <body>
+      <body suppressHydrationWarning={true}>
         <Header />
 
         <div className='min-h-screen'>{children}</div>

@@ -1,10 +1,9 @@
 import { SignInButton } from './SignInButton';
 import { UserMenu } from './UserMenu';
-import { nextAuthOptions } from '@/server/lib/nextauth';
-import { getServerSession } from 'next-auth';
+import { getSession } from '@/server/lib/nextauth';
 
 export const AuthAction = async () => {
-  const session = await getServerSession(nextAuthOptions);
+  const session = await getSession();
 
   if (session === null) {
     return <SignInButton />;
