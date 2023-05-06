@@ -22,6 +22,9 @@ model ArticleIdea {
   title       String @default("") @map("title") @db.VarChar(255)
   description String @default("") @map("description") @db.Text()
 
+  User   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId String @map("user_id")
+
   status ArticleIdeaStatus @default(OPEN) @map("status")
 
   @@map("article_ideas")
@@ -61,12 +64,14 @@ model Session {
 
 model User {
   id            String    @id @default(cuid())
-  name          String?
-  email         String?   @unique
+  name          String
+  email         String    @unique
   emailVerified DateTime?
   image         String?
   accounts      Account[]
   sessions      Session[]
+
+  ArticleIdea ArticleIdea[]
 
   @@map("adapter__users")
 }
