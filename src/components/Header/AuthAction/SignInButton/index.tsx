@@ -34,7 +34,7 @@ export const SignInButton = () => {
           </RadixDialog.Close>
 
           <RadixDialog.Description className='md:text-md text-sm'>
-            サインインすると、リクエストに「ヨミタイ」できるようになります。
+            サインインすると、「イツカカク」に「ヨミタイ」できるようになります。
           </RadixDialog.Description>
           <div className='flex flex-col items-center gap-4'>
             <button

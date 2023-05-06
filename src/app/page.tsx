@@ -2,7 +2,7 @@ import { TopPage } from '@/components/pages/TopPage';
 import { prisma } from '@/server/lib/prisma';
 
 export default async function Page() {
-  const articleRequests = await prisma.articleRequest.findMany();
+  const articleIdeas = await prisma.articleIdea.findMany();
 
-  return <TopPage articleRequests={articleRequests} />;
+  return <TopPage articleIdeas={articleIdeas} />;
 }

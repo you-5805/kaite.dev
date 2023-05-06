@@ -1,16 +1,16 @@
 'use client';
 
 import { Button } from '@/components/Button';
-import { createArticleRequestAction } from '@/server/_actions/createArticleRequest/action';
-import { formSchema } from '@/server/_actions/createArticleRequest/schema';
+import { createArticleIdea } from '@/server/_actions/createArticleIdea/action';
+import { formSchema } from '@/server/_actions/createArticleIdea/schema';
 import { cn } from '@/lib/cn';
 import { useRouter } from 'next/navigation';
 import { useTransition } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import type { FormSchema } from '@/server/_actions/createArticleRequest/schema';
+import type { FormSchema } from '@/server/_actions/createArticleIdea/schema';
 
-export const NewArticleRequestPage = () => {
+export const NewArticleIdeaPage = () => {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
 
@@ -21,15 +21,15 @@ export const NewArticleRequestPage = () => {
 
   const onSubmit = handleSubmit((data) => {
     startTransition(async () => {
-      const { id } = await createArticleRequestAction(data);
-      router.push(`/requests/${id}`);
+      const { id } = await createArticleIdea(data);
+      router.push(`/ideas/${id}`);
     });
   });
 
   return (
     <main className='px-4 py-2 md:py-4'>
       <form className='mx-auto grid max-w-xl gap-8' onSubmit={onSubmit}>
-        <h1 className='font-bold'>リクエストを作成する</h1>
+        <h1 className='font-bold'>イツカカクを作成する</h1>
         <Controller
           control={control}
           name='title'

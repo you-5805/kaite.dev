@@ -48,7 +48,7 @@ export const UserMenu = ({ session }: Props) => {
           align='end'
         >
           <DropdownMenu.Item
-            onSelect={() => router.push('/requests/new')}
+            onSelect={() => router.push('/ideas/new')}
             className='group cursor-pointer p-1 data-[highlighted]:outline-none'
           >
             <span className='flex w-full items-center rounded-md px-2 py-2 text-sm text-gray-900 group-data-[highlighted]:bg-sky-500 group-data-[highlighted]:text-white'>
@@ -56,7 +56,7 @@ export const UserMenu = ({ session }: Props) => {
                 className='mr-2 h-5 w-5 text-sky-600 group-data-[highlighted]:text-white'
                 aria-hidden='true'
               />
-              <span>リクエスト</span>
+              <span>イツカカク</span>
             </span>
           </DropdownMenu.Item>
           <DropdownMenu.Item
