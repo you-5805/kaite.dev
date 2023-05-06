@@ -10,7 +10,7 @@ export const Header = () => {
       <div className='mx-auto flex max-w-4xl items-center justify-between'>
         <Link
           href='/'
-          className='flex items-end gap-2 rounded-md text-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-1'
+          className='flex items-center gap-3 rounded-md font-mono text-xl font-bold focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-1'
         >
           <Logo />
 
