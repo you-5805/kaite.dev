@@ -1,5 +1,4 @@
 import { SizedContainer } from '@/components/SizedContainer';
-import type { ArticleIdea } from '@prisma/client';
 
 type Props = {
   user: {
@@ -12,9 +11,10 @@ type Props = {
 };
 
 export const UserPage = ({ user }: Props) => {
+  console.log({ user });
   return (
     <SizedContainer as='main'>
-      <h1>イツカカク一覧</h1>
+      <h1 className='text-lg font-bold'>自分のイツカカク</h1>
     </SizedContainer>
   );
 };
